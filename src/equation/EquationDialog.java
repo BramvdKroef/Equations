@@ -46,7 +46,7 @@ public class EquationDialog extends JDialog implements DocumentListener{
     }
     private void applyLayout(){
 	setLayout(new BoxLayout(getContentPane(), BoxLayout.Y_AXIS));
-	getContentPane().add(new JLabel("Formula:"));
+	getContentPane().add(new JLabel("Equations:"));
 	formula = new JTextArea("5+x*2+x = 2");
 	formula.getDocument().addDocumentListener(this);
 	getContentPane().add(new JScrollPane(formula));
