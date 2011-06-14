@@ -29,11 +29,23 @@ public class Variable implements Symbol {
 	return name;
     }
 
+    /**
+     * Returns a string representing the value the variable is equal to.
+     *
+     * @return null if the value was never set, a number if the
+     * equasion could be solved, or a string representation of the equasion.
+     * 
+     */
     public String valueToString() {
 	if (value == null)
 	    return "null";
-	else 
-	    return value.toString();
+	else {
+            Value val = value.getValue();
+            if (val == null)
+                return value.toString();
+            else
+                return val.toString();
+        }
     }
 
 }
