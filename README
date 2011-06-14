@@ -1,0 +1,53 @@
+* Intro
+
+The equation app tries to solve basic equations and find values
+for the variables in them.
+
+* Build
+
+To build this app you need:
+ - Java JDK
+ - Apache Ant
+
+To build the project open a terminal and get to the equation
+directory, where the build.xml and this README is. Run:
+
+ ant
+
+That will compile the source files and create a
+dist/equation.jar file.
+
+
+* Running the app
+
+You can run this from the terminal with:
+
+  java -jar dist/equation.jar
+
+Or, you can double click the file.
+
+
+* Usage
+
+The app has two text areas. You can enter your equations in the top
+field and the values for the variables will be generated in the bottom
+field. For example:
+
+x + x = 25 + y
+
+will generate:
+
+y = ((2.0 * x) - 25.0)
+x = ((y + 25.0) / 2.0)
+
+And:
+
+y = 5
+x + x = 25 + y
+
+generates:
+
+y = 5.0
+x = 15.0
+
+
